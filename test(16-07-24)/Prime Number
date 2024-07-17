@@ -1,0 +1,19 @@
+class Prime {
+    static boolean isPrime(int n) {
+        if(n <= 1) return false;
+        for(int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number1 = 11;
+        int number2 = 15;
+
+        System.out.println(number1 + " is prime: " + isPrime(number1));
+        System.out.println(number2 + " is prime: " + isPrime(number2));
+    }
+}
